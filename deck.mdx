@@ -1,23 +1,122 @@
-import { Head } from 'mdx-deck'
+import { Head, Appear } from 'mdx-deck';
 
-export { default as theme } from './theme'
+export { hack as theme } from 'mdx-deck/themes';
 
 <Head>
-  <title>Presentation Title</title>
+  <title>Blog sobre Linux - Como fue hecho</title>
 </Head>
 
-# Hello
+# Distribución del trabajo
+
+1. ¿Que ha hecho cada componente?
+2. ¿Que se ha realizado cada día?
 
 ---
 
-## Edit this file
-
-To create your presentation
-
-```notes
-- Create speaker notes in fenced code blocks
-```
+## ¿Que ha hecho cada componente?
 
 ---
 
-<https://github.com/jxnblk/mdx-deck>
+### Alvaro Quiros y Tato
+
+<ul style={{ fontSize: '1.25em' }}>
+    <li>Busqueda de información en distintos foros y fuentes.</li>
+    <Appear>
+        <li>Filtrado y resumen de la información previamente recolectada.</li>
+        <li>Maquetado de la información resultante con recursos audiovisuales relacionados.</li>
+    </Appear>
+</ul>
+
+---
+
+### Iker Pérez
+
+<ul style={{ fontSize: '1.25em' }}>
+    <li>Configuración y puesta en la nube de la página del blog.</li>
+    <Appear>
+        <li>Ligeros cambios en los estilos del blog.</li>
+        <li>El slider que se esta viendo en este momento.</li>
+    </Appear>
+</ul>
+
+---
+
+## ¿Que se ha realizado cada día?
+
+---
+
+### Primer día - 23 miercoles
+
+<div>
+    <p style={{ fontSize: '1.25em' }}>Se piensa como se hará el trabajo, que se usará para presentar cada parte y de que se ocupará cada miembro.</p>
+</div>
+
+<Appear>
+    <p style={{ fontSize: '1.25em' }}>Una vez repartido el trabajo cada parte comienza a investigar como realizar sus respectivas tareas.</p>
+    <p>Buscar fuentes aparentemente confiables en foros y páginas oficiales sobre Linux.</p>
+    <p>Elegir una tecnología/framework sobre la que realizar el blog y la presentación.</p>
+</Appear>
+
+---
+
+### Segundo día - 28 lunes
+
+<div>
+    <p style={{ fontSize: '1.25em' }}>Con las fuentes encontradas el día anterior y las tecnologías/frameworks finalmente elegidos se comienza el trabajo.</p>
+</div>
+
+<Appear>
+    <p style={{ fontSize: '1.25em' }}>Se hace una lista con todas las fuentes y se revisan para buscar duplicados y descartar las de menor relevancia.</p>
+    <p style={{ fontSize: '1.25em' }}>Se inicia el blog utilizando el framework elegido, y se configura mediante diversas tecnologías un metodo por el que cada miembro puede enviar su contribución y que automaticamente los demas lo puedan ver en la nube.</p>
+    <p>Se asegura que cada miembro sabe como utilizar las anteriores tecnologías para que pueda enviar su contribución desde casa.</p>
+</Appear>
+
+---
+
+# Búsqueda
+
+1. Fuentes que se han encontrado
+2. Fuentes publicadas en el foro
+3. Fuentes de otros compañeros del foro utilizadas
+
+---
+
+# Análisis de la información
+
+1. ¿Que información se ha descartado?
+2. ¿Se ha resumido algo? ¿Cómo?
+
+---
+
+# Presentación de la información
+
+1. ¿Qué tecnología se ha empleado?
+2. Mostrar el `documento`
+
+---
+
+## ¿Qué tecnología se ha empleado?
+
+---
+
+### Tanto el blog como la presentación estan basados en frameworks de `React` (JavaScript).
+
+<Appear>
+    <p style={{ fontSize: '1.25em' }}>Para el blog se ha utilizado un framework llamado GatsbyJS el cual a partir de markdown y React permite generar cualquier tipo de página estática.</p>
+    <p style={{ fontSize: '1.25em' }}>En la presentación se ha utilizado otro framework que también funciona mediante markdown y React pero orientado exclusivamente a presentaciones llamado mdx-deck.</p>
+</Appear>
+
+---
+
+### Los servicios utilizados para compartir y publicar los cambios realizados por cada miebro son `GitHub` y `Netlify`.
+
+<Appear>
+    <p style={{ fontSize: '1.25em' }}>GitHub es un VCS o servicio de repositorios en el cual mediante un cliente de git se pueden enviar cambios persistentes.</p>
+    <p style={{ fontSize: '1.25em' }}>Netlify ofrece hosting de páginas estáticas mediante una CDN de alta velocidad, que ademas permite conectarse con GitHub para que cada cambio enviado se publique automaticamente.</p>
+</Appear>
+
+---
+
+[Blog](https://linux-blog.ikerperez.es) - [Código Fuente](https://github.com/ANekoIsFineToo/linux-blog)
+
+[Código fuente de esta presentación](https://github.com/ANekoIsFineToo/how-was-made-linux-blog)
